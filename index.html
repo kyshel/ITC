@@ -1,80 +1,47 @@
-<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Itc by kyshel</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<head>
+	<script src="js/showdown.min.js"></script>
+	<style type="text/css">
+		#show{
+			width: 700px;
+			margin: 40px auto;
+		}
+	</style>
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/kyshel/itc">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/kyshel/itc/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/kyshel/itc/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+</head>
 
-    <div class="wrapper">
+<body>
+<div id = 'show'></div>
 
-      <section>
-        <div id="title">
-          <h1>Itc</h1>
-          <p>Information Theory &amp; Coding - Guidebook</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/kyshel">kyshel</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
 
-        <h1>
-<a id="itc" class="anchor" href="#itc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>itc</h1>
 
-<p>ITC is a Information Theory &amp; Coding guidebook, aims to help guys handle this course.</p>
 
-<h2>
-<a id="inroduction" class="anchor" href="#inroduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Inroduction</h2>
+<script type="text/javascript">
+function readTextFile(file)
+{
+	var rawFile = new XMLHttpRequest();
+	rawFile.open("GET", file, false);
+	rawFile.onreadystatechange = function ()
+	{
+		if(rawFile.readyState === 4)
+		{
+			if(rawFile.status === 200 || rawFile.status == 0)
+			{
+				var allText = rawFile.responseText;
 
-<p>信息论与编码 Guidebook</p>
+				//below is showdown work
+				var converter = new showdown.Converter(),
+				text      = allText,
+				html      = converter.makeHtml(text);
+				document.getElementById('show').innerHTML=html;
+			}
+		}
+	}
+	rawFile.send(null);
+}
 
-<p>个人感觉，《信息论与编码》这门课晦涩难懂，再加上老师讲得快，理解起来比较费劲。
-所以写了这样一本Guidebook， 算是导读书吧，旨在帮助大家拿下这门课。</p>
+readTextFile("itc.md");
+</script>
 
-<blockquote>
-<p>Information is beautiful ~ </p>
-</blockquote>
-
-<p>信息很美，这本书也很美，结构简单，没有大段的理论，不用害怕：)</p>
-
-<h2>
-<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact</h2>
-
-<ul>
-<li>Github: <a href="https://github.com/kyshel/itc">kyshel/itc</a>
-</li>
-<li>Blog: <a href="http://kyshel.com">kyshel.com</a>
-</li>
-</ul>
-
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
-
-<p><a href="https://opensource.org/licenses/MIT">MIT</a></p>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+</body>
 </html>

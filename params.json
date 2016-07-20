@@ -1,6 +1,0 @@
-{
-  "name": "Itc",
-  "tagline": "Information Theory & Coding - Guidebook",
-  "body": "#itc\r\nITC is a Information Theory & Coding guidebook, aims to help guys handle this course.\r\n##Inroduction\r\n信息论与编码 Guidebook\r\n\r\n\r\n个人感觉，《信息论与编码》这门课晦涩难懂，再加上老师讲得快，理解起来比较费劲。\r\n所以写了这样一本Guidebook， 算是导读书吧，旨在帮助大家拿下这门课。\r\n\r\n>Information is beautiful ~ \r\n\r\n信息很美，这本书也很美，结构简单，没有大段的理论，不用害怕：)\r\n##Contact\r\n* Github: [kyshel/itc](https://github.com/kyshel/itc)\r\n* Blog: [kyshel.com](http://kyshel.com)\r\n\r\n\r\n##License\r\n[MIT](https://opensource.org/licenses/MIT)\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
