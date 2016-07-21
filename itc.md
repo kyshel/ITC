@@ -2,6 +2,8 @@
 
 By  [kyshel](http://kyshel.com)
 
+**在线阅读：[kyshel.github.io/itc/](https://kyshel.github.io/itc/)**
+
 个人感觉，《信息论与编码》这门课晦涩难懂，再加上老师讲得快，理解起来比较费劲。
 所以写了这样一本Guidebook， 算是导读书吧，旨在帮助大家拿下这门课。
 >Information is beautiful ~ 
@@ -26,3 +28,15 @@ By  [kyshel](http://kyshel.com)
 课本上是这么定义的：
 >信息，是客观事物存在方式和运动状态的多样性和不确定性的度量。
 
+说白了，明天会下雨，这就是一条信息；
+
+你给朋友写一封信，也是传达了信息；
+
+1.信息
+信息是可以量化的，我们这样定义它：
+
+I = log 1 / p
+
+2.编码
+
+3.通信模型
